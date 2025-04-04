@@ -43,7 +43,7 @@ main {
 }
 
 footer {
-  background-color: pink;
+  background-color: var(--primary-color);
   height: 526px;
 }
 
@@ -62,7 +62,7 @@ header > ul > li {
 
 header > ul > li:hover {
   background-color: var(--secondary-color);
-  box-shadow: 0 4px 8px #0005;
+  box-shadow: 0 4px 8px var(--primary-color);
 }
 
 .login {
