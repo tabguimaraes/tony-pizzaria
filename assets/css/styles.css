@@ -4,7 +4,7 @@
   --primary-color: #f07807;
   --secondary-color: #f7e5d8;
   --default-shadow: 0 4px 8px #0008;
-  --default-padding: 0 80px;
+  --default-padding: 0 clamp(16px, 5vw, 80px);
   --default-transition: 0.5s;
 }
 
@@ -51,7 +51,7 @@ main {
 
 section {
   padding: var(--default-padding);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 footer {
@@ -146,7 +146,7 @@ header > menu > li:hover {
 
 .pizzas {
   position: relative;
-  max-width: 15vw;
+  max-width: clamp(150px, 15vw, 300px);
 }
 
 .pizzas:hover .add-pizza,
@@ -169,6 +169,7 @@ header > menu > li:hover {
   place-content: center;
   transition: var(--default-transition);
   display: grid;
+  transform: scale(1.1);
 }
 
 .container-info {
