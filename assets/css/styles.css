@@ -133,7 +133,7 @@ header > menu > li:hover {
   background-color: lightblue;
 }
 
-span {
+.home span {
   color: var(--primary-color);
   font-weight: 600;
 }
