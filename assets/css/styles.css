@@ -5,6 +5,7 @@
   --secondary-color: #f7e5d8;
   --default-shadow: 0 4px 8px #0008;
   --default-padding: 0 80px;
+  --default-transition: 0.5s;
 }
 
 * {
@@ -68,7 +69,7 @@ header > menu {
 
 header > menu > li {
   padding: 4px 8px;
-  transition: 0.5s;
+  transition: var(--default-transition);
 }
 
 header > menu > li:hover {
@@ -86,6 +87,10 @@ header > menu > li:hover {
   border-radius: 12px;
   border: none;
   background-color: var(--secondary-color);
+  transition: var(--default-transition);
+}
+
+.login:hover {
   box-shadow: var(--default-shadow);
 }
 
@@ -142,7 +147,6 @@ span {
 .pizzas {
   position: relative;
   max-width: 15vw;
-  max-height: 10vh;
 }
 
 .pizzas:hover .add-pizza,
@@ -163,7 +167,7 @@ span {
   color: white;
   font-size: 2rem;
   place-content: center;
-  transition: 0.5s;
+  transition: var(--default-transition);
   display: grid;
 }
 
@@ -173,6 +177,6 @@ span {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   width: 99%;
-  bottom: 10px;
+  bottom: 0;
   border-radius: 0 0 12px 12px;
 }
