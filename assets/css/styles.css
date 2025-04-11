@@ -13,6 +13,11 @@
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -32,7 +37,7 @@ header {
   position: fixed;
   height: 60px;
   width: 100vw;
-  top: 60px;
+  top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,29 +91,33 @@ header > menu > li:hover {
 
 .home {
   display: grid;
-  /* grid-template-columns: 4fr; */
   grid-template-rows: 3fr 1fr;
   background-color: var(--secondary-color);
   background-image: url(/assets/img/background.svg);
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
+  align-items: start;
 }
 
 .container-slogan {
+  margin-top: 7vw;
   display: flex;
-  justify-content: center;
-  align-items: end;
+  gap: 20vw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container-slogan img {
+  width: clamp(10vw, 23vw, 30vw);
 }
 
 .slogan {
-  height: 430px;
-  width: 560px;
+  max-width: 360px;
   font-style: italic;
-  font-weight: 300;
-  font-size: 4rem;
+  font-weight: 400;
+  font-size: clamp(1rem, 3vw, 4rem);
   color: black;
-  /* align-self: center; */
 }
 
 .cardapio {
@@ -132,6 +141,8 @@ span {
 
 .pizzas {
   position: relative;
+  max-width: 15vw;
+  max-height: 10vh;
 }
 
 .pizzas:hover .add-pizza,
