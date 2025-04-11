@@ -3,6 +3,8 @@
 :root {
   --primary-color: #f07807;
   --secondary-color: #f7e5d8;
+  --default-shadow: 0 4px 8px #0008;
+  --default-padding: 0 80px;
 }
 
 * {
@@ -15,31 +17,34 @@ a {
   text-decoration: none;
 }
 
-ul,
+menu,
 ol,
 li {
   list-style: none;
 }
 
 body {
-  padding: 0 80px;
   font-family: "Poppins", sans-serif;
   background-color: var(--secondary-color);
 }
 
 header {
   position: fixed;
-  /* background-color: tomato; */
   height: 60px;
-  width: calc(100% - 160px);
+  width: 100vw;
   top: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: var(--default-padding);
 }
 
 main {
-  height: 500px;
+}
+
+section {
+  padding: var(--default-padding);
+  height: 100vh;
 }
 
 footer {
@@ -47,7 +52,7 @@ footer {
   height: 526px;
 }
 
-header > ul {
+header > menu {
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
@@ -55,14 +60,14 @@ header > ul {
   gap: 50px;
 }
 
-header > ul > li {
+header > menu > li {
   padding: 4px 8px;
   transition: 0.5s;
 }
 
-header > ul > li:hover {
+header > menu > li:hover {
   background-color: var(--secondary-color);
-  box-shadow: 0 4px 8px var(--primary-color);
+  box-shadow: var(--default-shadow);
 }
 
 .login {
@@ -75,5 +80,20 @@ header > ul > li:hover {
   border-radius: 12px;
   border: none;
   background-color: var(--secondary-color);
-  box-shadow: 0 4px 8px #0005;
+  box-shadow: var(--default-shadow);
+}
+
+.home {
+  background-color: var(--secondary-color);
+  background-image: url(/assets/img/background.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.cardapio {
+  background-color: plum;
+}
+
+.servicos {
+  background-color: lightblue;
 }
