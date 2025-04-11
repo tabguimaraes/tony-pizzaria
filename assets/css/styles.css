@@ -40,6 +40,7 @@ header {
 }
 
 main {
+  color: var(--secondary-color);
 }
 
 section {
@@ -84,10 +85,30 @@ header > menu > li:hover {
 }
 
 .home {
+  display: grid;
+  /* grid-template-columns: 4fr; */
+  grid-template-rows: 3fr 1fr;
   background-color: var(--secondary-color);
   background-image: url(/assets/img/background.svg);
   background-position: top right;
   background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container-slogan {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.slogan {
+  height: 430px;
+  width: 560px;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 4rem;
+  color: black;
+  /* align-self: center; */
 }
 
 .cardapio {
@@ -96,4 +117,51 @@ header > menu > li:hover {
 
 .servicos {
   background-color: lightblue;
+}
+
+span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.container-pizzas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pizzas {
+  position: relative;
+}
+
+.pizzas:hover .add-pizza,
+.pizzas:hover .container-info {
+  opacity: 1;
+}
+
+.add-pizza {
+  opacity: 0;
+  position: absolute;
+  right: -16px;
+  top: -16px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  border: 4px solid white;
+  color: white;
+  font-size: 2rem;
+  place-content: center;
+  transition: 0.5s;
+  display: grid;
+}
+
+.container-info {
+  opacity: 0;
+  height: 36px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 99%;
+  bottom: 10px;
+  border-radius: 0 0 12px 12px;
 }
