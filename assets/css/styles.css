@@ -165,3 +165,18 @@ span {
   bottom: 10px;
   border-radius: 0 0 12px 12px;
 }
+
+.container-info span {
+  font-size: 12px;
+  color: #f7e5d8;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.container-info span:nth-of-type(2) {
+  margin-left: 10px;
+  background-color: #f07807;
+  width: 70px;
+  border-radius: 5px;
+}
