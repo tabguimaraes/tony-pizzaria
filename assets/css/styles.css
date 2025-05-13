@@ -37,6 +37,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: var(--default-padding);
+  z-index: 100;
+  backdrop-filter: blur(2px);
+  background-color: rgba(247, 229, 216, 0.8);
 }
 
 main {
